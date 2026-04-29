@@ -1,0 +1,44 @@
+.sidebar {
+  width: 175px;
+  background-color: #3c3c3c;
+  padding: 1rem 0.5rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  color: #ddd;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 0.7rem 0;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.sidebar-link:hover {
+  background-color: #5a5a5a;
+  color: white;
+}
+
+.sidebar-link.active {
+  background-color: #8da6c1;
+  color: white;
+}

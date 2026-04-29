@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>OneTouch Log - 完了</title>
+  <link rel="stylesheet" href="complete.css">
+  <link rel="stylesheet" href="/common/sidebar.css">
+  <script type="module" src="complete.js" defer></script>
+</head>
+
+<body>
+  <div id="sidebar-container"></div>
+
+  <main>
+    <div class="center-container">
+      <div class="center-align">
+        <h1>作業の完了</h1>
+        <p>
+          <span id="start-time" class="time_text">--:--</span>
+          →
+          <span id="end-time" class="time_text">--:--</span>
+        </p>
+        <p class="duration-text">
+          合計作業時間: <span id="duration">00:00:00</span>
+        </p>
+      </div>
+
+      <form id="complete-form">
+        <label for="taskName" class="left-label">
+          タスク名:
+          <input list="taskOptions" id="taskName" placeholder="タスク名を入力..." name="taskName" maxlength="20">
+          <datalist id="taskOptions">
+          </datalist>
+        </label>
+        <br><br>
+
+        <label for="memo" class="left-label">
+          メモ:
+          <textarea id="memo" placeholder="メモを入力..." name="memo" rows="4" cols="40" maxlength="100"></textarea>
+        </label>
+
+        <label id="evaluationLabel" for="evaluation">
+          評価:
+          <select id="evaluation" name="evaluation">
+            <option value="">選択してください</option>
+            <option value="1">悪い</option>
+            <option value="2">やや悪い</option>
+            <option value="3">普通</option>
+            <option value="4">やや良い</option>
+            <option value="5">良い</option>
+          </select>
+        </label>
+        <br><br>
+
+        <div class="center-align">
+          <button type="submit">完了</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
