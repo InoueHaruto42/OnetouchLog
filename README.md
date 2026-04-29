@@ -62,18 +62,23 @@ Database（H2）
 
 ## ディレクトリ構成
 
-src/main/java/com/example/onetouch
-├── controller
-├── entity
-└── repository
-
-src/main/resources/static
-├── common
-├── record
-├── complete
-├── history
-└── index
-
+```text
+src
+└── main
+    ├── java/com/example/onetouch
+    │   ├── controller
+    │   ├── entity
+    │   └── repository
+    │
+    └── resources
+        ├── application.properties
+        └── static
+            ├── index
+            ├── record
+            ├── complete
+            ├── history
+            └── common
+```
 ---
 
 ## 工夫した点
