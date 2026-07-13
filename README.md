@@ -36,9 +36,23 @@ OneTouchLogは、作業時間をワンクリックで記録・管理できるWeb
 
 ---
 
-## 実行方法
+## 使い方（公開URL）
 
-以下の手順でローカル環境で動作させることができます。
+インストール不要で、ブラウザから以下のURLにアクセスするだけで利用できます。
+
+```text
+https://onetouchlog.onrender.com
+```
+
+> **注意事項（無料プランのため）**
+> - 一定時間アクセスがないとサーバーがスリープするため、初回アクセス時の起動に1分ほどかかることがあります。
+> - サーバーの再起動時に記録データがリセットされることがあります。
+
+---
+
+## ローカルでの実行方法（開発者向け）
+
+以下の手順でローカル環境でも動作させることができます。
 ```bash
 git clone https://github.com/InoueHaruto42/OnetouchLog.git
 cd OnetouchLog
@@ -49,6 +63,19 @@ chmod +x gradlew
 ```text
 http://localhost:8080
 ```
+
+---
+
+## デプロイ方法（Render）
+
+本リポジトリには `Dockerfile` と `render.yaml` を用意しており、[Render](https://render.com) の無料プランでそのまま公開できます。
+
+1. Render にサインアップし、GitHubアカウントを連携する
+2. ダッシュボードで **New + → Blueprint** を選択し、このリポジトリを指定する（`render.yaml` が自動で読み込まれます）
+3. デプロイ完了後に発行されるURL（`https://<サービス名>.onrender.com`）にアクセスする
+
+以後は `main` ブランチにプッシュするたびに自動で再デプロイされます。
+
 ---
 
 ## 技術スタック
@@ -58,6 +85,7 @@ http://localhost:8080
 - データベース：H2 Database
 - ORM：Spring Data JPA（Hibernate）
 - ビルドツール：Gradle
+- デプロイ：Docker / Render
 
 ---
 

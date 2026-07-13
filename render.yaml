@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: onetouchlog
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      # 公開環境ではH2コンソールを無効化する
+      - key: SPRING_H2_CONSOLE_ENABLED
+        value: "false"

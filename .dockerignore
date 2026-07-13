@@ -1,0 +1,7 @@
+.git
+.gradle
+build
+data
+.vscode
+.DS_Store
+README.md
